@@ -84,7 +84,10 @@ public class TodoList {
 
     public String searchTask(String key){
 
-        return "";
+        if (todoList.containsKey(key))
+            return "Exists";
+        else
+            return "Not Exists";
     }
 
 }
