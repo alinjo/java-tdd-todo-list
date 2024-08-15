@@ -1,7 +1,7 @@
 | Classes    | Methods                     | Scenario                         | Outcomes |
 |------------|-----------------------------|----------------------------------|----------|
 | `ToDoList` | `addTask()`                 | Add task to todo-list.           |          |
-|            | `getAllTasks()`             | Retrieve task in todo-list.      |          |
+|            | `getAllTasks()`             | Retrieve tasks in todo-list.     |          |
 |            | `changeStatusTasks()`       | Change status of tasks.          |          |
 |            | `getCompleteTasks()`        | Retrieve completed tasks.        |          |
 |            | `getUncompleteTasks()`      | Retrieve uncompleted tasks.      |          |

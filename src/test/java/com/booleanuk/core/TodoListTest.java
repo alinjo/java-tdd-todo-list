@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 class TodoListTest {
     @Test
@@ -14,12 +15,30 @@ class TodoListTest {
     }
 
     @Test
-    public void addTaskTest(){
+    public void addTaskTest() {
 
         TodoList todoList = new TodoList();
         Assertions.assertTrue(todoList.addTask("homework"));
         Assertions.assertFalse(todoList.addTask("homework"));
 
     }
+
+    @Test
+    public void getAllTasksTest() {
+
+        TodoList todoList = new TodoList();
+
+        todoList.addTask("homework");
+        todoList.addTask("shopping");
+
+        List<String> tasks = todoList.getAllTasks();
+        Assertions.assertEquals(2, tasks.size());
+
+        Assertions.assertTrue(tasks.contains("homework"));
+        Assertions.assertTrue(tasks.contains("shopping"));
+
+    }
+
+
 }
 

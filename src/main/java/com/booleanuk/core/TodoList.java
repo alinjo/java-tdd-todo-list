@@ -1,6 +1,8 @@
 package com.booleanuk.core;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class TodoList {
     HashMap<String, Boolean> todoList;
@@ -21,6 +23,12 @@ public class TodoList {
             return true;
 
         }
+    }
+
+    public List<String> getAllTasks(){
+
+        return new ArrayList<>(todoList.keySet());
+
     }
 
 }
