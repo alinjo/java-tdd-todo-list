@@ -84,5 +84,19 @@ class TodoListTest {
         Assertions.assertEquals(test.getFirst(), "homework");
 
     }
+
+    @Test
+    public void searchTaskTest(){
+
+        TodoList todoList = new TodoList();
+
+        todoList.addTask("homework");
+        todoList.addTask("shopping");
+
+        String res = todoList.searchTask("homework");
+        Assertions.assertEquals(res, "Exists");
+
+    }
+
 }
 
