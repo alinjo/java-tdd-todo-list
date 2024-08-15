@@ -17,6 +17,7 @@ class TodoListTest {
     @Test
     public void addTaskTest() {
 
+        // Add tasks if does not already exists.
         TodoList todoList = new TodoList();
         Assertions.assertTrue(todoList.addTask("homework"));
         Assertions.assertFalse(todoList.addTask("homework"));
@@ -52,6 +53,21 @@ class TodoListTest {
 
         Assertions.assertTrue(todoList.changeStatusTasks("homework"));
         Assertions.assertFalse(todoList.getTasks().get("homework"));
+    }
+
+    @Test
+    public void getCompletedTasksTest() {
+
+        TodoList todoList = new TodoList();
+
+        todoList.addTask("homework");
+        todoList.addTask("shopping");
+
+        todoList.changeStatusTasks("homework");
+        ArrayList<String> test = todoList.getCompletedTasks();
+
+        Assertions.assertEquals(test.getFirst(), "homework");
+
     }
 }
 

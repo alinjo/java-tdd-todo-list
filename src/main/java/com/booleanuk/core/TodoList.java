@@ -15,6 +15,13 @@ public class TodoList {
         this.todoList = new HashMap<>();
     }
 
+    // Keys with names made into arraylist
+    public List<String> getAllTasks(){
+
+        return new ArrayList<>(todoList.keySet());
+
+    }
+
     public boolean addTask(String task) {
 
         if (todoList.containsKey(task)) {
@@ -23,22 +30,19 @@ public class TodoList {
 
         } else {
 
+            // Add initial status false
             todoList.put(task, false);
             return true;
 
         }
     }
 
-    public List<String> getAllTasks(){
-
-        return new ArrayList<>(todoList.keySet());
-
-    }
 
     public boolean changeStatusTasks(String task) {
 
         if (todoList.containsKey(task)) {
 
+            // Current status and toggle status
             boolean currentStatus = todoList.get(task);
             todoList.put(task, !currentStatus);
             return true;
@@ -49,6 +53,12 @@ public class TodoList {
 
         }
     }
+
+    public ArrayList<String> getCompletedTasks(){
+
+        return new ArrayList<>();
+    }
+
 
 }
 
