@@ -90,6 +90,11 @@ public class TodoList {
             return "Not Exists";
     }
 
+    public void removeTasks(String key){
+
+        todoList.remove(key);
+    }
+
 }
 
 

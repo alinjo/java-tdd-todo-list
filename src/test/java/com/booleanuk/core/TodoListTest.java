@@ -98,5 +98,19 @@ class TodoListTest {
 
     }
 
+    @Test
+    public void removeTasksTest(){
+
+        TodoList todoList = new TodoList();
+
+        todoList.addTask("homework");
+        todoList.addTask("shopping");
+
+        todoList.removeTasks("homework");
+        Assertions.assertTrue(todoList.searchTask("homework").equals("Not Exists"));
+
+    }
+
+
 }
 
