@@ -53,5 +53,5 @@ class TodoListTest {
         Assertions.assertTrue(todoList.changeStatusTasks("homework"));
         Assertions.assertFalse(todoList.getTasks().get("homework"));
     }
-    }
+}
 

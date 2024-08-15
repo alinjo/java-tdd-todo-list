@@ -37,8 +37,19 @@ public class TodoList {
 
     public boolean changeStatusTasks(String task) {
 
-    return false;
+        if (todoList.containsKey(task)) {
 
+            boolean currentStatus = todoList.get(task);
+            todoList.put(task, !currentStatus);
+            return true;
+
+        } else {
+
+            return false;
+
+        }
     }
 
 }
+
+
