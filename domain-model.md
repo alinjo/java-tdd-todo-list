@@ -10,7 +10,6 @@
 |            | `ascendingTasks()`          | Order tasks in Ascending tasks.  |          |
 |            | `descendingTasks()`         | Order tasks in Descending tasks. |          |
 
-
 // Parameters (status for task, title for task)
 // changeStatusTasks() in both classes. check current status and switch to that
-// 
+

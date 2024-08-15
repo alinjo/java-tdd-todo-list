@@ -7,6 +7,10 @@ import java.util.List;
 public class TodoList {
     HashMap<String, Boolean> todoList;
 
+    public HashMap<String, Boolean> getTasks() {
+        return todoList;
+    }
+
     public TodoList() {
         this.todoList = new HashMap<>();
     }
@@ -31,6 +35,10 @@ public class TodoList {
 
     }
 
+    public boolean changeStatusTasks(String task) {
+
+    return false;
+
+    }
+
 }
-
-

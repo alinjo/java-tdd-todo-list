@@ -39,6 +39,19 @@ class TodoListTest {
 
     }
 
+    @Test
+    public void changeStatusTasksTest() {
 
-}
+        TodoList todoList = new TodoList();
+
+        todoList.addTask("homework");
+        todoList.addTask("shopping");
+
+        Assertions.assertTrue(todoList.changeStatusTasks("homework"));
+        Assertions.assertTrue(todoList.getTasks().get("homework"));
+
+        Assertions.assertTrue(todoList.changeStatusTasks("homework"));
+        Assertions.assertFalse(todoList.getTasks().get("homework"));
+    }
+    }
 
