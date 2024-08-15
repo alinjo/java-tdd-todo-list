@@ -1,17 +1,28 @@
 package com.booleanuk.core;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class TodoList {
-    HashMap<String, Boolean> todoList = new HashMap<>();
+    HashMap<String, Boolean> todoList;
 
-    public boolean addTask(String task){
+    public TodoList() {
+        this.todoList = new HashMap<>();
+    }
 
-        // is the task a key already return false
-        // if not add default value(false?)
+    public boolean addTask(String task) {
 
-        return true;
+        if (todoList.containsKey(task)) {
+
+            return false;
+
+        } else {
+
+            todoList.put(task, false);
+            return true;
+
+        }
     }
 
 }
+
+
