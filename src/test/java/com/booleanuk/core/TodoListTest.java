@@ -126,6 +126,21 @@ class TodoListTest {
 
     }
 
-// comperator.reverseorder
+    @Test
+    public void descendingTasksTest(){
+
+        TodoList todoList = new TodoList();
+
+        todoList.addTask("win");
+        todoList.addTask("homework");
+        todoList.addTask("shopping");
+
+        ArrayList<String> res = todoList.descendingTasks();
+
+        Assertions.assertEquals(res.get(0), "win");
+
+    }
+
+
 }
 
