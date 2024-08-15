@@ -1,9 +1,6 @@
 package com.booleanuk.core;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class TodoList {
     HashMap<String, Boolean> todoList;
@@ -105,8 +102,12 @@ public class TodoList {
 
     public ArrayList<String> descendingTasks(){
 
-        return new ArrayList<>();
+        ArrayList<String> testList = new ArrayList<>(this.todoList.keySet());
+        testList.sort(Comparator.reverseOrder());
+
+        return testList;
     }
+
 
 }
 
