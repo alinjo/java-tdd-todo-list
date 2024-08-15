@@ -39,13 +39,13 @@ public class TodoList {
     }
 
 
-    public boolean changeStatusTasks(String task) {
+    public boolean changeStatusTasks(String task, boolean status) {
 
         if (todoList.containsKey(task)) {
 
             // Current status and toggle status
             boolean currentStatus = todoList.get(task);
-            todoList.put(task, !currentStatus);
+            todoList.put(task, status);
             return true;
 
         } else {
@@ -68,6 +68,10 @@ public class TodoList {
         return trueList;
     }
 
+    public ArrayList<String> getUnCompletedTasks(){
+
+        return new ArrayList<>();
+    }
 
 }
 

@@ -48,10 +48,10 @@ class TodoListTest {
         todoList.addTask("homework");
         todoList.addTask("shopping");
 
-        Assertions.assertTrue(todoList.changeStatusTasks("homework"));
+        Assertions.assertTrue(todoList.changeStatusTasks("homework", true));
         Assertions.assertTrue(todoList.getTasks().get("homework"));
 
-        Assertions.assertTrue(todoList.changeStatusTasks("homework"));
+        Assertions.assertTrue(todoList.changeStatusTasks("homework", false));
         Assertions.assertFalse(todoList.getTasks().get("homework"));
     }
 
@@ -63,7 +63,22 @@ class TodoListTest {
         todoList.addTask("homework");
         todoList.addTask("shopping");
 
-        todoList.changeStatusTasks("homework");
+        todoList.changeStatusTasks("homework", true);
+        ArrayList<String> test = todoList.getCompletedTasks();
+
+        Assertions.assertEquals(test.getFirst(), "homework");
+
+    }
+
+    @Test
+    public void getUnCompletedTasksTest() {
+
+        TodoList todoList = new TodoList();
+
+        todoList.addTask("homework");
+        todoList.addTask("shopping");
+
+        todoList.changeStatusTasks("homework", false);
         ArrayList<String> test = todoList.getCompletedTasks();
 
         Assertions.assertEquals(test.getFirst(), "homework");
