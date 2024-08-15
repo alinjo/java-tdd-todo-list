@@ -70,7 +70,16 @@ public class TodoList {
 
     public ArrayList<String> getUnCompletedTasks(){
 
-        return new ArrayList<>();
+        ArrayList<String> trueList = new ArrayList<>();
+        for(Map.Entry<String, Boolean> element : todoList.entrySet()){
+            if(element.getValue().equals(false)){
+                trueList.add(element.getKey());
+            }
+
+        }
+
+        return trueList;
+
     }
 
 }

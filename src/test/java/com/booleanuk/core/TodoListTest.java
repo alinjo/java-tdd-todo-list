@@ -79,7 +79,7 @@ class TodoListTest {
         todoList.addTask("shopping");
 
         todoList.changeStatusTasks("homework", false);
-        ArrayList<String> test = todoList.getCompletedTasks();
+        ArrayList<String> test = todoList.getUnCompletedTasks();
 
         Assertions.assertEquals(test.getFirst(), "homework");
 
