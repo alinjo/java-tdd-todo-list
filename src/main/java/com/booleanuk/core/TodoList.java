@@ -97,7 +97,10 @@ public class TodoList {
 
     public ArrayList<String> ascendingTasks(){
 
-       return new ArrayList<>();
+        ArrayList<String> testList = new ArrayList<>(this.todoList.keySet());
+        testList.sort(null);
+
+        return testList;
     }
 
 
