@@ -3,6 +3,7 @@ package com.booleanuk.core;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class TodoList {
     HashMap<String, Boolean> todoList;
@@ -56,7 +57,15 @@ public class TodoList {
 
     public ArrayList<String> getCompletedTasks(){
 
-        return new ArrayList<>();
+        ArrayList<String> trueList = new ArrayList<>();
+        for(Map.Entry<String, Boolean> element : todoList.entrySet()){
+            if(element.getValue() .equals(true)){
+                trueList.add(element.getKey());
+            }
+
+        }
+
+        return trueList;
     }
 
 
